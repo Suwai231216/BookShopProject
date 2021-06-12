@@ -1,0 +1,54 @@
+<h2>Simple Login Form</h2>
+
+
+<div class="row">
+    <!--Form-->
+    <div class="col">
+        <div class="card-header">Form</div>
+        <div class="card-body">
+            <form #form="" (ngSubmit)="onSubmit();">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input  type="text" class="form-control" name="name" ngModel placeholder="Enter Name" required>
+                    <div *ngIf="false" class="text-danger">Please Enter Name</div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Phone</label>
+                    <input type="text" class="form-control" name="phone" ngModel placeholder="Enter Phone" required>
+                    <div *ngIf="false" class="text-danger">Please Enter Phone</div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="text" class="form-control" name="email" ngModel placeholder="Enter Email" required>
+                    <div *ngIf="false" class="text-danger">Please Enter Email</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Gender</label>
+                    <div class="form-check form-check-inline">
+                        <label for="name">Male</label>
+                        <input type="radio" name="gender" ngModel value="Male" id ="Male" class="form-check">
+                    </div> 
+                    <div class="form-check form-check-inline">
+                        <label for="name">Female</label>
+                        <input type="radio" name="gender" ngModel value="Female" id ="Female" class="form-check">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button [disabled] ="form.invalid" type="submit" class="btn btn-outline-danger  mr-5">Login</button>
+                    <button type="reset" class="btn btn-outline-primary">Cancel</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+<div><span>-----------------</span></div>
+    <!--Form Value-->
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Form Value</div>
+            <pre>{{form.value | json}}</pre>
+        </div>
+    </div>
+</div>

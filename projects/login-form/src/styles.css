@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.nav-background {
+    background-color:  #d7f3ce ;
+}
+
+.nav-item > .nav-link.active{
+    background-color: #717c6d;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.mr-auto{
+    margin: auto;
+}
+.pd-10{
+    padding-top: 10px;
+}
